@@ -6,6 +6,8 @@ This project has 3 directories:
 "model" directory has two models:
 1. robot - This model has 4-wheel robot (It has 4 wheels and camera)
 2. simplefloor - This model has single floot structure 
+3. iris_with_standoffs - This model is cloned from gazebo online.
+   Cloned GIT REPO: https://github.com/osrf/gazebo_models.git 
 
 "script" directory has plugin C++ code
 
