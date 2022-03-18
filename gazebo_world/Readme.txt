@@ -18,6 +18,7 @@ To build plugin:
 2. cd ./build
 3. cmake ../
 4. make
+5. export GAZEBO_PLUGIN_PATH=`pwd`
 
 To run gazebo:
 1. cd  to TOP directory(gazebo_world)
