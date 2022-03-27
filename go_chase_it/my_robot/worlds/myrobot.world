@@ -1086,10 +1086,10 @@
       <static>1</static>
     </model>
     <state world_name='default'>
-      <sim_time>313 943000000</sim_time>
-      <real_time>174 552401496</real_time>
-      <wall_time>1647840281 168680675</wall_time>
-      <iterations>66555</iterations>
+      <sim_time>893 444000000</sim_time>
+      <real_time>665 304442149</real_time>
+      <wall_time>1648368562 327971517</wall_time>
+      <iterations>579501</iterations>
       <model name='ground_plane'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -1101,35 +1101,35 @@
         </link>
       </model>
       <model name='my_ball'>
-        <pose frame=''>8.88983 16.8975 0.1 0 -0 0</pose>
+        <pose frame=''>8.1361 -0.16311 0.1 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose frame=''>8.88983 16.8975 0.1 0 -0 0</pose>
+          <pose frame=''>8.1361 -0.16311 0.1 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='my_robot'>
-        <pose frame=''>4.6e-05 -0.003388 0.099995 -2e-06 8.8e-05 0.000146</pose>
+        <pose frame=''>-0.000102 -0.029984 0.099993 -8e-06 0.000261 0.001136</pose>
         <scale>1 1 1</scale>
         <link name='left_wheel'>
-          <pose frame=''>2.4e-05 0.146612 0.099994 -2e-06 0.002146 0.000146</pose>
-          <velocity>0.002182 0.000489 -0.005841 -0.005627 0.021825 1e-06</velocity>
-          <acceleration>3.7e-05 0.010102 -9.68037 -0.83952 0.000445 -0.001436</acceleration>
-          <wrench>0.000185 0.050512 -48.4019 0 -0 0</wrench>
+          <pose frame=''>-0.000272 0.120016 0.099992 -8e-06 0.004266 0.001136</pose>
+          <velocity>-0.00045 0.001103 -0.008537 -0.011807 -0.004504 -0</velocity>
+          <acceleration>7.4e-05 0.009301 -9.67554 -0.872187 -0.000554 -0.001368</acceleration>
+          <wrench>0.000369 0.046503 -48.3777 0 -0 0</wrench>
         </link>
         <link name='right_wheel'>
-          <pose frame=''>6.8e-05 -0.153388 0.099996 -2e-06 0.002376 0.000146</pose>
-          <velocity>0.002183 0.000478 -0.004402 -0.005522 0.021825 2e-06</velocity>
-          <acceleration>-0.000198 -0.010923 -9.92854 -0.629211 -0.005344 0.000327</acceleration>
-          <wrench>-0.000988 -0.054614 -49.6427 0 -0 0</wrench>
+          <pose frame=''>6.8e-05 -0.179984 0.099995 -8e-06 0.005233 0.001136</pose>
+          <velocity>-0.00045 0.001092 -0.00525 -0.011703 -0.004504 1e-06</velocity>
+          <acceleration>-0.000234 -0.011704 -9.93426 -0.662122 -0.005996 0.000455</acceleration>
+          <wrench>-0.001172 -0.058522 -49.6713 0 -0 0</wrench>
         </link>
         <link name='robot_footprint'>
-          <pose frame=''>4.6e-05 -0.003388 0.099995 -2e-06 8.8e-05 0.000146</pose>
-          <velocity>0.002183 0.000484 -0.005118 -0.005405 0.021825 1e-06</velocity>
-          <acceleration>5.3e-05 0.000272 -9.79705 -0.390756 0.000468 -0.001897</acceleration>
-          <wrench>0.000803 0.004103 -147.935 0 -0 0</wrench>
+          <pose frame=''>-0.000102 -0.029984 0.099993 -8e-06 0.000261 0.001136</pose>
+          <velocity>-0.00045 0.001098 -0.006889 -0.011577 -0.004504 0</velocity>
+          <acceleration>5.3e-05 0.000796 -9.79675 -0.404244 6.7e-05 -0.001691</acceleration>
+          <wrench>0.000802 0.012019 -147.931 0 -0 0</wrench>
         </link>
       </model>
       <model name='simplefloor'>
@@ -1250,7 +1250,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose frame=''>13.7337 -56.1639 38.3574 -0 0.609797 1.50461</pose>
+        <pose frame=''>5.9151 -23.4931 21.3889 -0 0.609797 1.50461</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
