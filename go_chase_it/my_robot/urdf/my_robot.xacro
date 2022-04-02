@@ -1,5 +1,6 @@
 <robot name="my_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
- <xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
+<xacro:include filename="$(find my_robot)/urdf/my_robot.gazebo" />
+
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
@@ -9,7 +10,7 @@
   </joint>
 
   <link name='chassis'>
-    <pose>0 0 0.1 0 0 0</pose>
+    <pose>0 0 0.3 0 0 0</pose>
 
     <inertial>
       <mass value="15.0"/>
@@ -20,18 +21,18 @@
           izz="0.1"
       />
     </inertial>
-	
+
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".4 .2 .1"/>
+        <box size=".6 .24 .1"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <box size=".6 .24 .1"/>
       </geometry>
     </visual>
 
@@ -134,7 +135,6 @@
     <dynamics damping="1.0" friction="1.0"/>
   </joint>
 
-
   <link name = "camera">
     <inertial>
       <mass value="0.1" />
@@ -159,10 +159,10 @@
   
  <joint name="camera_joint" type="fixed">
             <axis xyz="0 1 0" />
-            <origin xyz="0.2 0 0" rpy="0 0 0"/>
+            <origin xyz="0.3 0 0" rpy="0 0 0"/>
             <parent link="chassis"/>
             <child link="camera"/>
-    </joint>
+ </joint>
 
  <link name="hokuyo">
     <collision name='hokuyo_collision'>
@@ -198,18 +198,20 @@
   </joint>
 
 <gazebo reference="chassis">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Yellow</material>
 </gazebo>
 
 <gazebo reference="left_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Purple</material>
 </gazebo>
 
 <gazebo reference="right_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Purple</material>
 </gazebo>
 
+
 <gazebo reference="camera">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Green</material>
 </gazebo>
 </robot>
+
