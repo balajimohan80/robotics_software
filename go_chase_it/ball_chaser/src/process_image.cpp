@@ -77,14 +77,18 @@ class Process_Image {
             static std::pair<int, int> right_range = {mid_range.second+1, img.width};
             //Compute the total image size
             static const size_t image_size = img.height * img.width;
+	    static const float total_pixels = static_cast<float>(image_size);
             #if 0       
             std::cout << left_range.first << " " << left_range.second << " " << mid_range.first << " " << mid_range.second << " " 
                       << right_range.first << " " << right_range.second << "\n";
             #endif
             rgb8 *ptr = reinterpret_cast<rgb8 *>(const_cast<unsigned char *>(img.data.data()));
             robo_velocity curr_velocity = {0.0f, 0.0f};
-            
+      
+	    //Set the white pixel count to zero	    
+	    size_t count_white_pix = 0;   
             for (size_t i = 0;i < image_size; i++, ptr++) {
+		//Check the pixel is white pix or not    
                 if (*ptr == white_Pix) {
                     const size_t col = i % img.width;
                     if (col >= left_range.first && col <= left_range.second) {
@@ -94,14 +98,30 @@ class Process_Image {
                     } else {
                         curr_velocity = {0.5f, -1.0f};              
                     }
-                    break;
+		    //Increment the no of white pixel
+                    ++count_white_pix;
                 }
             }
+	    //Calculate the percentage of white pixel
+	    float white_pix_percent = static_cast<float>(count_white_pix);
+	    white_pix_percent /= total_pixels;
+#if 0
+	    std::cout << "White Pix: " << white_pix_percent << "\n";
+#endif
+	    //If the percentage of white pixel is greater than 10%
+	    //stop the velocity of the robot 
+	    if (white_pix_percent > 0.10f) {
+#if 0		    
+		std::cout << "Close to the ball, stop the robot...\n";
+#endif
+		//Stop the velocity of vehicle.
+		curr_velocity = {0.0f, 0.0f};
+	    }
 
             if (last_velocity != curr_velocity) {
                 last_velocity = curr_velocity;
                 #if 0
-                std::cout << "Vel: " << curr_velocity.first << " " << curr_velocity.second << "\n";
+                std::cout << "---------------------Vel: " << curr_velocity.first << " " << curr_velocity.second << "\n";
                 #endif
                 drive_robot(curr_velocity.first, curr_velocity.second);
             }

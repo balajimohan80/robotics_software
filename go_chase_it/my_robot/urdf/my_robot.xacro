@@ -14,51 +14,51 @@
 
     <inertial>
       <mass value="15.0"/>
-      <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
+      <origin xyz="0 0 0" rpy=" 0 -0.05 0"/>
       <inertia
-          ixx="0.1" ixy="0" ixz="0"
-          iyy="0.1" iyz="0"
-          izz="0.1"
+          ixx="0.166667" ixy="0" ixz="0"
+          iyy="0.166667" iyz="0"
+          izz="0.166667"
       />
     </inertial>
 
     <collision name='collision'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/> 
+      <origin xyz="0 0 0" rpy=" 0 -0.05 0"/> 
       <geometry>
         <box size=".6 .24 .1"/>
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
-      <origin xyz="0 0 0" rpy=" 0 0 0"/>
+      <origin xyz="0 0 0" rpy=" 0 -0.05 0"/>
       <geometry>
         <box size=".6 .24 .1"/>
       </geometry>
     </visual>
 
     <collision name='back_caster_collision'>
-      <origin xyz="-0.35 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="-0.23 0 -0.07" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
     </collision>
 
     <visual name='back_caster_visual'>
-      <origin xyz="-0.25 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="-0.23 0 -0.07" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
     </visual>
     
     <collision name='front_caster_collision'>
-      <origin xyz="0.35 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="0.23 0 -0.07" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
     </collision>
 
     <visual name='front_caster_visual'>
-      <origin xyz="0.20 0 -0.05" rpy=" 0 0 0"/>
+      <origin xyz="0.23 0 -0.07" rpy=" 0 0 0"/>
       <geometry>
         <sphere radius="0.05"/>
       </geometry>
@@ -71,9 +71,9 @@
      <mass value="5.0"/>
      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
      <inertia
-          ixx="0.1" ixy="0" ixz="0"
-          iyy="0.1" iyz="0"
-          izz="0.1"/>
+          ixx="0.166667" ixy="0" ixz="0"
+          iyy="0.166667" iyz="0"
+          izz="0.166667"/>
     </inertial> 
      
    <collision name="left_wheel_collision">
@@ -105,9 +105,9 @@
      <mass value="5.0"/>
      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
      <inertia
-          ixx="0.1" ixy="0" ixz="0"
-          iyy="0.1" iyz="0"
-          izz="0.1"/>
+          ixx="0.166667" ixy="0" ixz="0"
+          iyy="0.166667" iyz="0"
+          izz="0.166667"/>
     </inertial> 
      
    <collision name="right_wheel_collision">
